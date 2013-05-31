@@ -1,4 +1,8 @@
-node-angular-seed
-=================
+Installation
+============
+npm install
+bower install
 
-Seed project for Mongo Express Angular Node projects
+Run tests
+===========
+karma start
