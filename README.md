@@ -27,4 +27,11 @@ style.styl
 
 Run tests
 ===========
+
+Unit Tests
+--------
 karma start
+
+End to End Tests
+--------
+karma start karma-e2e.conf.js

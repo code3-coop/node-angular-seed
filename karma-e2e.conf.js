@@ -8,26 +8,25 @@ basePath = '';
 
 // list of files / patterns to load in the browser
 files = [
-  JASMINE,
-  JASMINE_ADAPTER,
+  ANGULAR_SCENARIO,
+  ANGULAR_SCENARIO_ADAPTER,
   'components/jquery/jquery.js',
   'components/angular/angular.min.js',
   'components/angular-mocks/angular-mocks.js',
   'components/underscore/underscore-min.js',
   'components/bootstrap/docs/assets/js/bootstrap.min.js',
   'assets/js/**/*.coffee',
-  'test/*.coffee',
-  'test/backEnd/*.coffee',
-  'test/frontEnd/*.coffee'
+  'test/e2e/*.coffee'
 ];
 
 
 preprocessors = {
   'assets/js/**/*.coffee': 'coffee',
-  'test/*.coffee': 'coffee',
-  'test/backEnd/*.coffee' : 'coffee',
-  'test/frontEnd/*.coffee' : 'coffee'
+  'test/e2e/*.coffee': 'coffee'
 };
+
+urlRoot = '/_karma_/';
+proxies = {'/': 'http://localhost:3000/'};
 
 // list of files to exclude
 exclude = [
@@ -69,7 +68,7 @@ autoWatch = true;
 // - Safari (only Mac)
 // - PhantomJS
 // - IE (only Windows)
-browsers = ['PhantomJS'];
+browsers = ['Chrome'];
 
 
 // If browser does not capture in given timeout [ms], kill it
