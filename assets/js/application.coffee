@@ -34,9 +34,6 @@ angular.module( 'myStartupApp', [] ).
   ]).
 
   run(($location, $http) ->
-    # Set the CSRF token for Rails
-    $http.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
-
     # Follow an initial path if specified
     if window.client_route
       $location.path('/' + window.client_route)
